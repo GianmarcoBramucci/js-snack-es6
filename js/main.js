@@ -52,6 +52,7 @@ let aula = [
 
 for(let studente of aula){
     studente.name = studente.name.toUpperCase();
+    
 }
 
 console.log(aula);
@@ -70,3 +71,60 @@ arrayTerzo = aula.filter((studente) =>{
 
 console.log(arraySecond);
 console.log(arrayTerzo);
+
+
+//! terzo snack
+
+const bikes = [
+    {
+        nome: "Bianchi Oltre XR4",
+        peso: 7.1
+    },
+    {
+        nome: "Specialized Tarmac SL7",
+        peso: 7.3
+    },
+    {
+        nome: "Trek Madone SLR 9",
+        peso: 7.2
+    },
+    {
+        nome: "Cannondale SuperSix EVO",
+        peso: 7.0
+    },
+    {
+        nome: "Pinarello Dogma F12",
+        peso: 7.4
+    },
+    {
+        nome: "Colnago C64",
+        peso: 7.5
+    },
+    {
+        nome: "Scott Foil Premium",
+        peso: 7.1
+    },
+    {
+        nome: "Giant TCR Advanced SL",
+        peso: 6.9
+    },
+    {    
+        nome: "Wilier Zero SLR", 
+        peso: 6.8 
+    },
+    { 
+        nome: "Cervélo R5",
+         peso: 7.2 
+    }
+];
+
+let min = bikes[0].peso;
+let lightBike= {};
+for( let bike of bikes){
+    if(bike.peso < min){
+        min = bike.peso;
+        lightBike = bike;
+    }
+}
+let {nome, peso} = lightBike;
+console.log(`BICI:${nome} PESO:${peso}`);
