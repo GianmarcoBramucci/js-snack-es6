@@ -128,3 +128,50 @@ for( let bike of bikes){
 }
 let {nome, peso} = lightBike;
 console.log(`BICI:${nome} PESO:${peso}`);
+
+//! quarto snack
+const listTeam = [
+    {
+      name: 'Milan',
+      points: 0,
+      fouls: 0
+    },
+    {
+      name: 'Roma',
+      points: 0,
+      fouls: 0
+    }, 
+    {
+      name: 'Inter',
+      points: 0,
+      fouls: 0
+    },
+    {
+      name: 'Napoli',
+      points: 0,
+      fouls: 0
+    },
+    {
+      name: 'Juventus',
+      points: 0,
+      fouls: 0
+    }
+  ];
+
+// stavo cercando di fare una classifica delle sqadre effettiva ma purtroppo stavo impazendo per farlo
+let maxScore = 100;
+let last = 0;
+let minScore =0;
+let newListTeam= [];
+for(let team of listTeam){
+    let newTeam= {};
+    last =+ team.points;
+    maxScore = (maxScore-last);
+    team.points = getRndInteger(minScore,maxScore );
+    team.fouls = getRndInteger(0,10);
+    let {name,fouls}= team;
+    newTeam.name=name;
+    newTeam.fouls= fouls;
+    newListTeam.push(newTeam);
+}
+console.log(newListTeam);
